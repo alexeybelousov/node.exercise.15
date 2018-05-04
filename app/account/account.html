@@ -1,0 +1,30 @@
+<form name="form" novalidate>
+    <!-- Вот так можем навешивать дополнительные визуальные классы в зависимости от состояния -->
+    <div class="form-group">
+        <label for="">Name</label>
+        <input type="text" class="form-control" name="nameInput" ng-model="vm.name" ng-required="true">
+    </div>
+    <div ng-messages="form.nameInput.$error" ng-show="form.nameInput.$dirty">
+        <p ng-message="required">Поле name - обязательно</p>
+    </div>
+    <div class="form-group">
+        <label for="">Email</label>
+        <input type="email" class="form-control" name="emailInput" ng-model="vm.email" ng-required="true">
+    </div>
+    <div ng-messages="form.emailInput.$error" ng-show="form.emailInput.$dirty">
+        <p ng-message="required">Поле email - обязательно</p>
+        <p ng-message="email">Email is invalid</p>
+    </div>
+    <div class="form-group">
+        <label for="">Phone</label>
+        <input type="number" class="form-control" name="inputPhone" ng-model="vm.phone" ng-minlength="10" ng-maxlength="10" ng-pattern="/^[7-9][0-9]{9}$/">
+    </div>
+    <div ng-messages="form.inputPhone.$error" ng-show="form.inputPhone.$dirty">
+        <p ng-message="pattern">Phone number is invalid</p>
+    </div>
+    <!-- вот так можно вывести текущее состояние формы -->
+    <div>
+        <!-- {{form.$error}} -->
+    </div>
+    <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid">Submit</button>
+</form>
