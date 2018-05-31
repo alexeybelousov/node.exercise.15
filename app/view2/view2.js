@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.view2', ['ui.router'])
+angular.module('myApp.view2', [])
 
 .controller('View2Ctrl', [function() {
 

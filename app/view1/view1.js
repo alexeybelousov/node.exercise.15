@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.view1', ['ui.router'])
+angular.module('myApp.view1', [])
 
     .controller('View1Ctrl', function ($scope) {
         $scope.pokemons = [{

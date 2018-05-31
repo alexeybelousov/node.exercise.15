@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.account', ['ui.router'])
+angular.module('myApp.account', [])
 
 .controller('MyAccountCtrl', [function() {
 
